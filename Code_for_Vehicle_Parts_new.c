@@ -9,7 +9,7 @@ int EN1 =6;
 int EN2 =7;
 int trigpin = 8;
 int echoPin =9;
-int unknown = 11;
+
 
 int sensorval = 0;
 
