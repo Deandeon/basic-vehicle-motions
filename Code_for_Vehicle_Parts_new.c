@@ -10,13 +10,14 @@ int EN2 =7;
 int trigpin = 8;
 int echoPin =9;
 int unknown = 11;
+int new = 12;
 
 int sensorval = 0;
 
 int duration = 0;
 
 int distance = 0;
- 
+
 void stopMoving();
 void moveForward();
 void moveLeft();
@@ -38,7 +39,7 @@ void setup() {
   pinMode(echoPin,INPUT);
   pinMode(EN1, OUTPUT);
   pinMode(EN2, OUTPUT);
- 
+
  //ULTRASONIC SENSOR SETUP
 
   Serial.begin(9600);
@@ -56,14 +57,14 @@ void moveBackwards() {
   digitalWrite(IN2, HIGH);
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, HIGH);
- 
-}     
+
+}
 void moveForward() {
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, LOW);
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
-  
+
 }
 
 void moveLeft() {
@@ -71,7 +72,7 @@ void moveLeft() {
   digitalWrite(IN2, LOW);
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
-  
+
 }
 
 void moveRight() {
@@ -79,7 +80,7 @@ void moveRight() {
   digitalWrite(IN2, LOW);
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, LOW);
- 
+
 }
 
 void stopMoving() {
@@ -87,7 +88,7 @@ void stopMoving() {
   digitalWrite(IN2, HIGH);
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, HIGH);
-  
+
 }
 
 void ultraact(){
@@ -110,7 +111,7 @@ void sharpturnright()
 analogWrite(EN1,255);
 analogWrite(EN2,255);
 digitalWrite(IN1,HIGH);
-digitalWrite(IN2, LOW);  
+digitalWrite(IN2, LOW);
 digitalWrite(IN3, HIGH);
 digitalWrite(IN4, LOW);
 }
@@ -121,7 +122,7 @@ void sharpturnLeft()
 analogWrite(EN1,255);
 analogWrite(EN2,255);
 digitalWrite(IN1,LOW);
-digitalWrite(IN2, HIGH);  
+digitalWrite(IN2, HIGH);
 digitalWrite(IN3, LOW);
 digitalWrite(IN4, HIGH);
 }
